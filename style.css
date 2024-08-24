@@ -1,0 +1,340 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    box-sizing:border-box;
+}
+body{
+    background-color:rgb(51, 202, 13);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-title{
+    font-size:1.5rem;
+    text-align:center;
+    color:rgb(187, 11, 2);
+    text-shadow: 2px 2px 5px rgb(161, 234, 17);;
+
+}
+.nav-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:1.5em;
+    padding:10px;
+    margin:7px;
+    font-weight:bold;
+    border-radius:10px;
+    
+}
+a:hover{
+    background-color: gray;
+    color:blue;
+}
+.nav-menu{
+    display:flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+[class*="col-"]{
+    float: left;
+    padding:10px;
+}
+
+[class*="col-"]{
+    width:100%;
+}
+.navbar{
+    background-color: #0c6168;
+    padding: 1% 7%;
+    text-align: center;
+   
+}
+.navbar::after{
+    content: '';
+    display:table;
+    clear:both;
+}
+
+.intro{
+    background-color:rgb(36, 46, 46);
+    height:300px;
+    width:100%;
+    border:2px solid yellow;
+    box-shadow: 5px  red;
+
+}
+h2{
+    color:rgb(173, 215, 19);
+    font-size:2.5rem;
+    text-align:center;
+    margin-top: 10px;
+    padding-top:50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   text-shadow: 2px 1px 3px blue;
+}
+.about-me{
+    background-color:#39a4ac;
+    color:white;
+    padding:1% 7%;
+    text-align:center;
+    font-family:'Times New Roman', Times, serif;
+    border:2px solid red;
+}
+.about-me::after{
+    content: '';
+    display: table;
+    clear:both;
+
+}
+.dotted-hr{
+ border: 6px dotted rgb(237, 4, 4);
+ border-bottom: none;
+ margin: 20px auto;
+ width:80px;
+}
+.des{
+    margin-top: 5px;
+    padding-top:30px;
+}
+.about-img img{ 
+    height:220px;
+    width:200px;
+    border-radius: 50%;
+    border: 4px solid yellow;
+}
+
+.about-img img:hover{
+    border: 5px solid red;
+}
+.about-me-info{
+    background-color:#39aca4 ;
+
+    font-size:2em;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.about-me-info p > a{
+    color:white;
+    text-decoration: none;
+
+}
+.about-me-info > p{
+    padding:20px;
+
+}
+.skills{
+    margin:3px;
+    padding:5px;
+    background-color: beige;
+    
+}
+
+ .skills .card{
+    background-color:#a39c9e ;
+    padding:10px;
+    height:650px;
+    border:2px solid red;
+    border-radius:9px;
+    margin:5px;
+}
+ .card-icon {
+    text-align: center;
+    background-color: rgb(29, 34, 34);
+
+  
+ }
+ .card-icon img{
+    border-radius:50%;
+    height:150px;
+    width:200px;
+    padding:10px;
+    border:2px solid green;
+    margin:5px;
+ }
+ .card-title {
+    background-color: gray; 
+    
+}
+.card-title > h4{
+    text-align: center;
+    font-size:1.4em;
+    padding:10px;
+    color:white;
+
+}
+.card-description{
+    padding:10px;
+    color:rgb(6, 2, 2);
+    
+    text-align: left;
+}
+.card-description ol > li > p{
+    padding:3px;
+
+}
+.card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+.skills::after{
+    content: '';
+    display: table;
+    clear:both;
+}
+
+.skill-container{
+    padding-right:45px;
+}
+
+.skill-container  li{
+    list-style:none;
+    font-weight:bolder;
+    margin:30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+.skill-container li::before{
+    content: '';
+    position:absolute;
+    top:calc(100% + 5px);
+    left:0;
+    width:100%;
+    height:10px;
+    background-color:rgba(26, 26, 79, 0.5);
+    border-radius:100px;
+}
+.skill-container li::after{
+    content: '';
+    position:absolute;
+    top:calc(100% + 5px);
+    left:0;
+    width:0;
+    height:10px;
+    background-color:rgba(26, 26, 79, 1);
+    border-radius:100px;
+    animation-duration: 3s;
+    animation-delay:1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+}
+.skill-container li.html::after{
+    animation-name:html;
+}
+
+@keyframes html{
+    to{
+        width: 95%;
+    }
+}
+.skill-container li.css::after{
+    animation-name:css;
+}
+
+@keyframes css{
+    to{
+        width: 90%;
+    }
+}
+.skill-container li.boot::after{
+    animation-name:boot;
+}
+
+@keyframes boot{
+    to{
+        width: 10%;
+    }
+}
+
+.skill-container li.c::after{
+    animation-name:c;
+}
+
+@keyframes c{
+    to{
+        width: 90%;
+    }
+}
+.skill-container li.cp::after{
+    animation-name:cp;
+}
+
+@keyframes cp{
+    to{
+        width: 80%;
+    }
+}
+
+.contact{
+    background-color:#0c6168;
+    text-align: center;
+    margin:4px;
+    border: 3px solid yellow;
+    border-radius: 3px;
+    padding:5px;
+}
+.form form{ 
+    background-color: rgb(4, 173, 15);
+    height:auto;
+    width:70%;
+    margin:0 auto;
+   padding:30px ; 
+}
+.l1, .l2, .l3{
+    font-size: 1.2em;
+    color:blue;
+}
+.name, .mail, .msg{
+    padding:4px;
+}
+input{
+    border: 2px solid red;
+    margin:3px;
+    padding:5px;
+    background-color: aqua;
+}
+textarea{
+    border: 2px solid blue;
+    border-radius: 4px;
+    height:150px;
+    width:250px;
+    background-color:#a39c9e ;
+}
+textarea:hover{
+    background-color: aqua;
+}
+button{
+    width:100px;
+    height:30px;
+    background-color: gray;
+    color:aliceblue;
+    font-weight: bolder;
+    border: 4px solid red;
+    border-radius:5px;
+}
+.copy{
+    background-color: aquamarine;
+    border: 5px solid violet;
+    height:10vh;
+    width:100vw;
+}
+.p1{
+    font-size: 2.3rem;
+    font-weight: bolder;
+    font-style: italic;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+padding: 10px;
+}
+.sp{
+    font-size: 1.1em;
+    color: blue;
+    text-shadow: 2px 3px 5px red;
+}
+.copy strong{
+    color: red;
+    font-size: 1.2em;
+}
